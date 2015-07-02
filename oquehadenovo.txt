@@ -1,0 +1,5 @@
+- Criptografia da senhas em md5
+- Cadastrar Administrador
+- Usuário comum pode excluir a ordem de serviço que ele criou.
+- Função de alterar senha
+- adiciona a coluna função em solicitante

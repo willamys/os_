@@ -1,0 +1,281 @@
+@font-face{
+    font-family: "Ubuntu";
+    src: url("../fontes/Ubuntu-R.ttf");
+}
+
+@font-face{
+    font-family: "Ubuntu Negrito";
+    src: url("../fontes/Ubuntu-B.ttf");
+}
+
+
+body{
+
+    /*Fonte*/
+    font-family: "Ubuntu", sans-serif;
+    
+    /*Sem margens*/
+    margin: 0;
+    
+    /*Efeito de degradÃª, obtido pelo site ULTIMATE CSS GRADIENT GENERATOR */
+    background: #b4e391; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #b4e391 0%, #61c419 50%, #b4e391 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#b4e391), color-stop(50%,#61c419), color-stop(100%,#b4e391)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #b4e391 0%,#61c419 50%,#b4e391 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, #b4e391 0%,#61c419 50%,#b4e391 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, #b4e391 0%,#61c419 50%,#b4e391 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center, #b4e391 0%,#61c419 50%,#b4e391 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4e391', endColorstr='#b4e391',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+h1.cabecalho{
+    /*Fonte*/
+    font-family: "Ubuntu Negrito", sans-serif;
+    /*Cor*/
+    color: white;
+
+    /*Efeito Sombra (posicao X , Y, embassamento e cor: preto)*/
+    text-shadow: 3px 3px 1px black;
+
+    /*Espacamento*/
+    padding: 10px;
+
+    /*Remover o topo da margem*/
+    margin-top: 0;
+
+    /*Bordas redondas (apenas na parte inferior esqueda e direita) */
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    
+
+    /*Efeito de degrade, obtido pelo site ULTIMATE CSS GRADIENT GENERATOR */
+    background: #f8ffe8; /* Old browsers */
+    background: -moz-linear-gradient(top, #f8ffe8 0%, #b7df2d 85%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8ffe8), color-stop(85%,#b7df2d)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #f8ffe8 0%,#b7df2d 85%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f8ffe8 0%,#b7df2d 85%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f8ffe8 0%,#b7df2d 85%); /* IE10+ */
+    background: linear-gradient(to bottom, #f8ffe8 0%,#b7df2d 85%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8ffe8', endColorstr='#b7df2d',GradientType=0 ); /* IE6-9 */
+}
+
+h5{
+   /*Fonte*/
+    font-family: "Ubuntu", sans-serif;
+
+    /*Cor*/
+    color: black;
+
+    /*Efeito Sombra (posicao X , Y, embassamento e cor: preto)*/
+    /*text-shadow: 2px 2px 1px black;*/
+
+    /*Espacamento*/
+    padding: 15px;
+
+    /*Remover todas as margem*/
+    margin: 0;
+
+    /*Bordas redondas para todos os cantos */
+    border-radius: 5px;
+
+    /*Efeito de degrade, obtido pelo site ULTIMATE CSS GRADIENT GENERATOR */
+    background: #f8ffe8; /* Old browsers */
+    background: -moz-linear-gradient(top, #f8ffe8 0%, #b7df2d 85%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8ffe8), color-stop(85%,#b7df2d)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #f8ffe8 0%,#b7df2d 85%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f8ffe8 0%,#b7df2d 85%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f8ffe8 0%,#b7df2d 85%); /* IE10+ */
+    background: linear-gradient(to bottom, #f8ffe8 0%,#b7df2d 85%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8ffe8', endColorstr='#b7df2d',GradientType=0 ); /* IE6-9 */
+}
+/*Aplicando estilo na tabela*/
+table{
+    /*Sombra em volta da tabela (posicao X , Y, embassamento e cor: preto)*/
+    box-shadow: 3px 3px 15px black;
+
+    /*Efeito para aparentar as tabelas do Microsoft Word e Excel*/
+    border-collapse: collapse;
+    
+    /*Borda externa da tabela*/
+    border: 2px;
+
+    margin: 5px;
+}
+
+/*Aplicando estilo no cabecalho da tabela*/
+th{
+    /*Fonte*/
+    font-family: "Ubuntu Negrito", sans-serif;
+
+    /*Cor de fundo*/
+    background-color: silver;
+
+    /* Efeito Sombra do texto (posicao X , Y, embassamento e cor: branca)*/
+    text-shadow: 1px 1px 1px white;
+}
+
+/*Aplicando estilo nas linhas da tabela*/
+/*esse parametro especifica a linha par*/
+tr:nth-child(2n){
+    /*Cor de fundo da linha*/
+    background-color: white;
+}
+
+/*esse parametro especifica a linha impar*/
+tr:nth-child(2n+1){
+    /*Cor de fundo da linha*/
+    background-color: azure;
+}
+
+/*esse parametro especifica cor que a linha fica ao posicionarmos o mouse sobre ela*/
+tr:hover{
+    /*Cor de fundo ao passar o mouse*/
+    background-color: skyblue;
+}
+
+/*esse parametro especifica o estilo dos elementos abaixo*/
+table, tr, td, th{
+    /*Borda interna dos elementos*/
+    border: 1px solid black;
+    font-size: 10pt;
+}
+
+/*esse parametro especifica a borda interna dos elementos abaixo*/
+tfoot tr th{
+    /*Alinhamento do texto*/
+    text-align: center;
+
+    /*Alinhamento vertical do texto*/
+    vertical-align: middle;
+
+    /*Espacamento*/
+    padding: 15px;
+
+    /*Cor de fundo*/
+    background-color: white;
+}
+
+
+/*esse parametro aplica estilo no elemento 'fieldset' (que circunda os formulários)*/
+fieldset{
+    /*Cor de fundo do fieldset*/
+    border-color: black;
+
+    /*Sombra do fieldset (posicao X , Y, embassamento e cor: preto)*/
+    box-shadow: 1px 1px 1px black;
+
+    font-size: large;
+}
+
+/*esse parametro aplica estilo no elemento 'legend' (legenda) dos fieldsets (que circundam os formulários)*/
+fieldset legend{
+    /*Fonte da legenda do fieldset*/
+    font-family: "Ubuntu Negrito", sans serif;
+
+    /*Cor da legenda do fieldset*/
+    color: black;
+
+    /*Sombra da legenda do fieldset (posicao X , Y, embassamento e cor: branco)*/
+    text-shadow: 1px 1px 1px white;
+}
+
+/*esse parametro aplica estilo nos label's (rotulos dos campos texto dos formularios)*/
+label{
+    /*Faz os rotulos flutuarem para a esquerda (elimina a necessidade de tabelas para fazer alinhamento - os campos texto ficam a direita)*/
+    float: left;
+
+    /*Alinha o texto dos rotulos do label para a direita*/
+    text-align: right;
+
+    /*Distancia da Margem direita do label*/
+    margin-right: 5px;
+
+    /*Largura do label*/
+    width: 130px;
+
+    /*Label em negrito*/
+    font-weight: bold;
+
+    /*Fonte do label*/
+    font-size: inherit;
+}
+
+/*Define classe que estiliza o botao 'Cadastrar OS'*/
+.botao_cadastrar{
+    /*Alinhamento Vertical (no meio)*/
+    vertical-align: middle;
+
+    /*Nenhum sublinhado abaixo do link*/
+    text-decoration: none;
+
+    /*Borda*/
+    border: 1px solid black;
+
+    /*Arredondamento das bordas*/
+    border-radius: 10px;
+
+    /*Espacamento*/
+    padding: 10px 10px 13px 10px; /*topo, direita, fundo, esquerda*/
+
+    /*Sombra do texto (posicao X , Y, embassamento e cor: branco)*/
+    text-shadow: 1px 1px 1px white;
+
+    /*Sombra em volta do botao (posicao X , Y, embassamento e cor: preto)*/
+    box-shadow:  2px 2px 2px black;
+
+    /*Efeito de degrade, obtido pelo site ULTIMATE CSS GRADIENT GENERATOR */
+    background: #f0f9ff; /* Old browsers */
+    background: -moz-linear-gradient(top, #f0f9ff 0%, #cbebff 47%, #a1dbff 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0f9ff), color-stop(47%,#cbebff), color-stop(100%,#a1dbff)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #f0f9ff 0%,#cbebff 47%,#a1dbff 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f0f9ff 0%,#cbebff 47%,#a1dbff 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f0f9ff 0%,#cbebff 47%,#a1dbff 100%); /* IE10+ */
+    background: linear-gradient(top, #f0f9ff 0%,#cbebff 47%,#a1dbff 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#a1dbff',GradientType=0 ); /* IE6-9 */
+}
+
+/*Define a estilização da imagem contida no botao cadastrar os*/
+.imagem_botao_cadastrar{
+    /*Centraliza a imagem verticalmente*/
+    vertical-align: middle;
+}
+
+/*Define cores diferentes para cada reacao do link*/
+.botao_cadastrar:visited, .botao_inserir:link, .botao_inserir:active{
+    color: black;    
+    border: 1px solid black;    
+}
+
+/*Define o estilo de quando se passa o mouse pelo botao*/
+.botao_cadastrar:hover{
+    color: blue;
+    border: 1px solid black;
+    text-decoration: none;
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #eef8fc 35%, #d1ecf7 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(35%,#eef8fc), color-stop(100%,#d1ecf7)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#eef8fc 35%,#d1ecf7 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%,#eef8fc 35%,#d1ecf7 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%,#eef8fc 35%,#d1ecf7 100%); /* IE10+ */
+    background: linear-gradient(top, #ffffff 0%,#eef8fc 35%,#d1ecf7 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d1ecf7',GradientType=0 ); /* IE6-9 */
+}
+
+/*Define o estilo das imagens (sem borda)*/
+img{
+    border:0;
+}
+
+/*Define o estilo dos links em geral (sem efeitos)*/
+a:link, a:visited, a:active{
+    text-decoration: none;
+    font-size: medium;
+}
+
+/*Define o estilo do texto italico*/
+i{
+    font-size: 13px;
+    
+}
+

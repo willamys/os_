@@ -1,0 +1,211 @@
+-- Servidor: localhost
+-- Ultima atualizacao em: 29/08/2012
+-- Criado por: Fabio Arruda Magalhaes
+
+
+drop database ordemservico;
+
+create database ordemservico;
+
+use ordemservico;
+
+
+
+CREATE TABLE os (
+	cod_os 			INT PRIMARY KEY AUTO_INCREMENT NOT NULL,	
+	cod_solicitante 	INT NOT NULL,
+	descricao_equip		VARCHAR(20) NOT NULL,	
+	setor_origem		VARCHAR(30) NULL,
+	institucional		VARCHAR(15) NULL,
+	tombamento		INT NULL,				
+	serv_solicitado		VARCHAR(255) NULL,
+	prob_identificado	VARCHAR(255) NULL,
+	serv_realizado		VARCHAR(255) NULL,
+	tecnico_resp		VARCHAR(255) NULL,
+	status 			VARCHAR(20) NULL,
+	hora_cadastro		VARCHAR(10) NULL,
+	data_cadastro 		VARCHAR(10) NULL,
+	hora_encerramento	VARCHAR(10) NULL,
+	data_encerramento	VARCHAR(10) NULL	
+)TYPE=INNODB;;
+
+CREATE TABLE equipamento (	
+	tombamento	 	INT NOT NULL,		
+	descricao_equip		VARCHAR(20) NOT NULL,
+	marca			VARCHAR(20) NULL,
+	modelo			VARCHAR(20) NULL	
+		
+)TYPE=INNODB;;
+
+
+CREATE TABLE tipoequipamento(	
+	descricao_equip		VARCHAR(20) NOT NULL PRIMARY KEY
+)TYPE=INNODB;;
+
+
+CREATE TABLE solicitante (
+	cod_solicitante 	INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	nome		 	VARCHAR(255) NOT NULL,
+	cargo		 	VARCHAR(30) NULL,
+	siape	 		VARCHAR(20) NULL,
+	email			VARCHAR(255) NOT NULL,
+	tipo_solic 		INT NOT NULL	
+)TYPE=INNODB;;
+
+
+ALTER TABLE os
+       ADD  ( CONSTRAINT 
+              FOREIGN KEY (cod_solicitante)
+                             REFERENCES solicitante(cod_solicitante)) ;
+
+ALTER TABLE os
+       ADD  ( CONSTRAINT 
+              FOREIGN KEY (descricao_equip)
+                             REFERENCES tipoequipamento(descricao_equip)) ;
+
+ALTER TABLE equipamento
+       ADD  ( PRIMARY KEY (tombamento, descricao_equip)) ;
+
+
+ALTER TABLE equipamento
+       ADD  ( CONSTRAINT 
+              FOREIGN KEY (descricao_equip)
+                             REFERENCES tipoequipamento (descricao_equip)) ;
+
+
+
+INSERT INTO solicitante (nome, cargo, siape, email, tipo_solic)
+  VALUES ('Antonio Arley Rodrigues da Silva', 'Professor','2681488', 'arley@ifce.edu.br', 1);
+
+INSERT INTO solicitante (nome, cargo, siape, email, tipo_solic)
+  VALUES ('Clemilton da Silva Ferreira', 'Professor','1827089', '', 1);
+
+INSERT INTO solicitante (nome, cargo, siape, email, tipo_solic)
+  VALUES ('Cley Anderson Silva de Freitas', 'Professor','1842452', '', 1);
+
+INSERT INTO solicitante (nome, cargo, siape, email, tipo_solic)
+  VALUES ('David de Miranda Rodrigues', 'Professor','1764274', '', 1);
+
+INSERT INTO solicitante (nome, cargo, siape, email, tipo_solic)
+  VALUES ('Felipe Moreira Barboza', 'Professor','1794386', '', 1);
+
+INSERT INTO solicitante (nome, cargo, siape, email, tipo_solic)
+  VALUES ('Guttenberg S. Santos Ferreira', 'Professor','4497694', '', 1);
+
+INSERT INTO solicitante (nome, cargo, siape, email, tipo_solic)
+  VALUES ('Jose Nilton Alves Pereira Junior', 'Professor','1892346', '', 1);
+
+INSERT INTO solicitante (nome, cargo, siape, email, tipo_solic)
+  VALUES ('Jackson Nunes de Vasconcelos', 'Professor','1744183', '', 1);
+
+INSERT INTO solicitante (nome, cargo, siape, email, tipo_solic)
+  VALUES ('Paulo Henrique Calixto Moreira', 'Professor','1634115', '', 1);
+
+INSERT INTO solicitante (nome, cargo, siape, email, tipo_solic)
+  VALUES ('Vinicius Fontenele Figueira', 'Professor','18119425', '', 1);
+
+INSERT INTO solicitante (nome, cargo, siape, email, tipo_solic)
+  VALUES ('Vlademir Delfino Rocha', 'Professor','1795359', '', 1);
+
+INSERT INTO solicitante (nome, cargo, siape, email, tipo_solic)
+  VALUES ('Wellington de Queiroz Neves', 'Professor','1856790', '', 1);
+
+INSERT INTO solicitante (nome, cargo, siape, email, tipo_solic)
+  VALUES ('Jose Monteiro de Souza', 'Diretor','6269702', '', 1);
+
+INSERT INTO solicitante (nome, cargo, siape, email, tipo_solic)
+  VALUES ('Andressa Elias Tavares', 'Assistente em Administracao','1842408', '', 1);
+
+INSERT INTO solicitante (nome, cargo, siape, email, tipo_solic)
+  VALUES ('Anna Karine P. B. de Mesquita', 'Assistente de Biblioteca','1794394', '', 1);
+
+INSERT INTO solicitante (nome, cargo, siape, email, tipo_solic)
+  VALUES ('Flavio Alexandre R. Barbosa Lima', 'Tecnico em Eletrotecnica','1849756', '', 2);
+
+INSERT INTO solicitante (nome, cargo, siape, email, tipo_solic)
+  VALUES ('Francisca Danielli do Vale Almeida', 'Assistente em Administracao','1683102', '', 1);
+
+INSERT INTO solicitante (nome, cargo, siape, email, tipo_solic)
+  VALUES ('Igor da Paz Palacio', 'Tecnico de TI','1812188', '', 2);
+
+INSERT INTO solicitante (nome, cargo, siape, email, tipo_solic)
+  VALUES ('Willamys Gomes Fonseca Araujo', 'Tecnico de TI','1961193', '', 2);
+
+INSERT INTO solicitante (nome, cargo, siape, email, tipo_solic)
+  VALUES ('Iraciel Raimundo Costa', 'Assistente em Administracao','1842360', '', 1);
+
+INSERT INTO solicitante (nome, cargo, siape, email, tipo_solic)
+  VALUES ('Larisse Oliveira Melo Escorcio', 'Tecnico em Assuntos Educacionais','1812123', '', 1);
+
+INSERT INTO solicitante (nome, cargo, siape, email, tipo_solic)
+  VALUES ('Maria Raquel Andrade Teixeira', 'Assistente de Alunos','1892231', '', 1);
+
+INSERT INTO solicitante (nome, cargo, siape, email, tipo_solic)
+  VALUES ('Thayrone Portela de Sousa', 'Assistente em Administracao','1841044', '', 1);
+
+INSERT INTO solicitante (nome, cargo, siape, email, tipo_solic)
+  VALUES ('Zelia Maria Souto Fernandes', 'Bibliotecaria','1892250', '', 1);
+
+INSERT INTO solicitante (nome, cargo, siape, email, tipo_solic)
+  VALUES ('Fabio Arruda Magalhaes', 'Analista de TI','1811971', '', 2);
+
+INSERT INTO solicitante (nome, cargo, siape, email, tipo_solic)
+  VALUES ('Denise Fernandes Silva ', 'Assistente em Administracao','1838097', '', 1);
+
+
+
+INSERT INTO tipoequipamento (descricao_equip)
+  VALUES ('Notebook');
+
+INSERT INTO tipoequipamento (descricao_equip)
+  VALUES ('Computador');
+
+INSERT INTO tipoequipamento (descricao_equip)
+  VALUES ('Netbook');
+
+INSERT INTO tipoequipamento (descricao_equip)
+  VALUES ('Monitor');
+
+INSERT INTO tipoequipamento (descricao_equip)
+  VALUES ('CPU');
+
+INSERT INTO tipoequipamento (descricao_equip)
+  VALUES ('Impressora');
+
+INSERT INTO tipoequipamento (descricao_equip)
+  VALUES ('Scanner');
+
+INSERT INTO tipoequipamento (descricao_equip)
+  VALUES ('Switch');
+
+INSERT INTO tipoequipamento (descricao_equip)
+  VALUES ('Estabilizador');
+
+INSERT INTO tipoequipamento (descricao_equip)
+  VALUES ('Nobreak');
+
+INSERT INTO tipoequipamento (descricao_equip)
+  VALUES ('Projetor Multimidia');
+
+INSERT INTO tipoequipamento (descricao_equip)
+  VALUES ('Aparelho de DVD');
+
+INSERT INTO tipoequipamento (descricao_equip)
+  VALUES ('Aparelho de Som');
+
+INSERT INTO tipoequipamento (descricao_equip)
+  VALUES ('Outros');
+
+
+
+INSERT INTO equipamento (tombamento, descricao_equip, marca, modelo)
+  VALUES (000000, 'Netbook', 'cce', 'win');
+
+INSERT INTO equipamento (tombamento, descricao_equip, marca, modelo)
+  VALUES ('457113', 'Notebook', 'hp', 'compac');
+
+
+INSERT INTO os (cod_solicitante, descricao_equip, setor_origem, institucional, tombamento, serv_solicitado, prob_identificado, serv_realizado, tecnico_resp, status, hora_cadastro, data_cadastro, hora_encerramento, data_encerramento)
+  VALUES (1, 'Netbook', 'Nao informado', 'Nao', 000000, 'reparacao', 'fonte com defeito','substituicao da fonte', 'Fabio Arruda Magalhaes','Finalizada', '00:14:00', '25/08/2012', '00:23:00', '29/08/2012');
+
+ 
