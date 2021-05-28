@@ -22,5 +22,5 @@
                 $("#myTable").tablesorter();
                });
         </script>
-
+        <title> Sistema de Ordem de serviços</title>
     </head>
