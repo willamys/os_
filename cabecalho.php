@@ -13,7 +13,7 @@
         <link rel="stylesheet" type="text/css" href="style.css">
 
 
-        <img src="common/icones/logoIFCE.png" width="200" height="85">      
+<img src="common/icones/logoIFCE.png" alt="Logomarca IFCE" width="200" height="85">      
         <title>Sistema Ordem de Servicos </title>
 
         <script>
@@ -22,5 +22,4 @@
                 $("#myTable").tablesorter();
                });
         </script>
-        <title> Sistema de Ordem de serviços</title>
     </head>
