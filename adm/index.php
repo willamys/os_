@@ -6,7 +6,7 @@ session_start();
 if ( $_SESSION['funcionalidade'] == "2" ){
 	?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <?php
         require_once('../cabecalho.php');
     ?>
