@@ -13,7 +13,7 @@ if ( $_SESSION['funcionalidade'] == "2" ){
     
     <body>
         <h1 class="cabecalho">Ordem de Servi&ccedil;os</h1>
-	Seja bem vindo <b><?php echo $_SESSION['usuario']?></b>
+	Seja bem vindo <strong><?php echo $_SESSION['usuario']?></strong>
 	<a href="../deslogar.php">Sair</a>
         <br />
         <h5>Instituto Federal do Cear&atilde; - Campus Tiangu&atilde; - 2012</h5>
